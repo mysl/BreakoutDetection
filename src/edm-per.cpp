@@ -80,8 +80,8 @@ void EdmPer::evaluate(const std::vector<double> &Z, int min_size, double percent
 
             //calculate statistic value
             double left_median = get_median(left_min, left_max), right_median = get_median(right_min, right_max);
-            double normalize = ((t - prev[t]) * (s - t)) / (std::pow(static_cast<double>(s - prev[t]), 2));
-            double tmp = F[t] + normalize * std::pow(static_cast<double>(left_median - right_median), 2);
+			double normalize = ( (t-prev[t]) * (s-t) ) / ( std::pow(static_cast<double>(s-prev[t]),2) );
+			double tmp = F[t] + normalize * std::pow(static_cast<double>(left_median - right_median),2);
             //Find best location for change point. check % condition later
             if (tmp > F[s]) {
                 number[s] = number[t] + 1;
