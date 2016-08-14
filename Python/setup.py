@@ -1,4 +1,4 @@
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 extension_mod = Extension("_breakout_detection",
                           sources = ["breakout_detection.i",

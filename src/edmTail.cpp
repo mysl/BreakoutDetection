@@ -96,7 +96,7 @@ std::vector<int> AddToTree(int B, std::vector<double>& x){
 void EdmTail::evaluate(const std::vector<double>& Z, int min_size, double alpha, double quant){
 
 	int N = Z.size();
-	int eps = (int)std::ceil( std::log(N) );
+	int eps = (int)std::ceil( std::log(static_cast<double>(N)) );
 	eps = std::max( eps, 10 );
 	
 	Information info(eps,min_size);
